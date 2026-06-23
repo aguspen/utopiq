@@ -97,8 +97,8 @@ export default function LandingPage() {
           </p>
           <h1>
             {lang === 'es'
-              ? <>Tu negocio en el mundo digital, <span className="hl">potenciado con IA.</span></>
-              : <>Your business in the digital world, <span className="hl">powered by AI.</span></>}
+              ? <>Tu negocio en el mundo digital,<br /><span className="hl">potenciado con IA.</span></>
+              : <>Your business in the digital world,<br /><span className="hl">powered by AI.</span></>}
           </h1>
           <div className="hero-bottom">
             <p className="hero-sub">
@@ -284,7 +284,7 @@ export default function LandingPage() {
           </h2>
           <div className="stmt-body rv d1">
             <p><T es="Usamos inteligencia artificial como herramienta central. Eso nos permite entregar en menos tiempo, con mayor precisión y a precios accesibles — sin resignar calidad." en="We use artificial intelligence as our core tool. That lets us deliver faster, with greater precision and at accessible prices — without sacrificing quality." lang={lang} /></p>
-            <p><T es="No somos una agencia con estructuras pesadas. Somos un equipo chico, ágil y muy enfocado en resultados. Cada peso que invertís, trabaja." en="We're not an agency with heavy structures. We're a small, agile team, laser-focused on results. Every dollar you invest, works." lang={lang} /></p>
+            <p><T es="No somos una agencia con estructuras pesadas. Somos un equipo chico, ágil y muy enfocado en resultados." en="We're not an agency with heavy structures. We're a small, agile team, laser-focused on results." lang={lang} /></p>
           </div>
         </div>
       </section>
@@ -331,7 +331,7 @@ export default function LandingPage() {
           </div>
           <div className="faq-right">
             {FAQ_ITEMS.map((item, i) => (
-              <div key={i} className={`faq-item rv${i > 0 ? ` d${Math.min(i,4)}` : ''}${openFaq === i ? ' open' : ''}`}>
+              <div key={i} className={`faq-item${openFaq === i ? ' open' : ''}`}>
                 <button className="faq-q" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
                   <span>{lang === 'es' ? item.q.es : item.q.en}</span>
                   <div className="faq-ico"><PlusIcon /></div>
